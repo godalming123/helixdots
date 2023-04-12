@@ -15,5 +15,5 @@ skip-levels = 0
 
 [editor.statusline]
 left = ["mode", "spinner"]
-center = ["file-name"]
+center = ["file-name", "file-modification-indicator"]
 right = ["diagnostics", "position-percentage", "position"]
