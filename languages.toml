@@ -1,0 +1,12 @@
+[language-server.astro-ls]
+command = "astro-ls"
+args = [ "--stdio" ]
+config = { "environment" = "node" }
+
+[[language]]
+name = "astro"
+scope = "source.astro"
+injection-regex = "astro"
+file-types = ["astro"]
+roots = ["package.json", "astro.config.mjs"]
+language-servers = [ "astro-ls" ]
