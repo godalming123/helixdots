@@ -24,6 +24,7 @@ My helix editor dotfiles.
 - When commands ran with sh return long outputs they cannot be scrolled (I would not need this if the above issue is resolved)
 - I cannot have an undotree
 - No moving selected up/down (see https://github.com/helix-editor/helix/issues/2245)
-- You cannot remove items from/clear the jumplist so it just slowly get clogged up (see https://github.com/helix-editor/helix/issues/4757)
+- You can only add to the jump list or clear it by exiting helix (see https://github.com/helix-editor/helix/issues/4757)
+- There is no file tree
 - When you search for things helix should show how many results their are (see https://github.com/helix-editor/helix/issues/2811)
 - There should be an error when formatting fails (see https://github.com/helix-editor/helix/issues/6736)
