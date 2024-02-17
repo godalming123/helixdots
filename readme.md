@@ -1,6 +1,26 @@
 # HelixDots
 My helix editor dotfiles.
 
+# Installation
+## Install the dotfiles
+```
+git clone https://github.com/godalming123/helixdots.git ~/.config/helix
+```
+
+## Install rust (if not already installed)
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+## Install helix with a custom build for macro keybindings (https://github.com/helix-editor/helix/pull/4709)
+```
+git clone https://github.com/godalming123/helix.git
+cd helix
+git checkout macro-keybinds
+cargo install --path helix-term --locked
+ln -Ts $PWD/runtime ~/.config/helix/runtime
+```
+
 # My thoughs on helix
 ## General
 - I like how everything needs much less configuration as things such as git integration are setup out of the box
