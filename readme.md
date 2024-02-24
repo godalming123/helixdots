@@ -45,19 +45,22 @@ ln -Ts $PWD/runtime ~/.config/helix/runtime
 - I think both helix and neovim do a good job of this
 
 ## Missing some functionality
+- Be able to jump across projects/files within projects effectively:
+  - The jumplist cannot have directories in it
+  - The jumplist cannot be saved across multiple sessions
+  - You cannot remove items from the jumplist without exiting the session (https://github.com/helix-editor/helix/issues/4757)
 - I cannot set global tab size options (https://github.com/helix-editor/helix/issues/3159)
-- The jumplist cannot be saved across multiple sessions
-- You cannot remove items from the jumplist without exiting the session (https://github.com/helix-editor/helix/issues/4757)
 - When you search for things helix should show how many results their are (https://github.com/helix-editor/helix/issues/2811)
 - There should be an error when formatting fails (https://github.com/helix-editor/helix/issues/6736)
-- I want to be able to hide the blankline below the status bar
+- I want to be able to hide the blankline below the status bar when it is empty
 ### Things that will probably get solved with plugins (https://github.com/helix-editor/helix/discussions/3806)
 - No git diff viewer integration (https://github.com/helix-editor/helix/issues/227)
 - No undotree
 ### Problems with my file tree
-- There should be 3 panes
-- There should be a search to filter the list
-- There should only be one key to open files *and* directories
-- You should be able to move multiple lines (EG: `5j`)
-- When you navigate to the previous directory, the cursor should be moved to the entry for the previous directory
 - The popup that shows the available commands should be shrunk into the status so that it does not hide the window content
+- When files/folders are deleted/moved/renamed, the locations of the buffers should update
+- There should only be one key to open files *and* directories
+- You should be able to move multiple lines up/down (EG: `5j`)
+- There should be a search to filter the list
+- When you navigate to the previous directory, the cursor should be moved to the entry for the previous directory
+- There should be 3 panes
