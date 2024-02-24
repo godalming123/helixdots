@@ -22,22 +22,22 @@ C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_befor
 # ===============================
 # Keybindings for the file picker
 # ===============================
-C-f = "@:new<ret>:insert-output pwd; ls -A1 --indicator-style=slash<ret>:2<ret>_"                                # open the file picker
+C-f = "@:new<ret>:insert-output pwd; ls -A1 --indicator-style=slash<ret>:2<ret>_"                                              # open the file picker
 [keys.normal."_"]
-c = ":buffer-close!"                                                                                             # close file picker
+c = ":buffer-close!"                                                                                                           # close file picker
 ret = ["delete_selection", "paste_before", # Make sure that the file has been modified so that we can jump to it later
-       "extend_to_line_bounds", "goto_file", "goto_last_modified_file", ":buffer-close!"]                        # open the selected file
-l = "@x:change-current-directory <C-r>.<ret>%d:insert-output pwd; ls -A1 --indicator-style=slash<ret>:2<ret>_"   # open the selected directory
-h = "@:change-current-directory ../<ret>%d:insert-output pwd; ls -A1 --indicator-style=slash<ret>:2<ret>_"       # goto the parent directory
-j = "@j_"                                                                                                        # move down the list
-k = "@k_"                                                                                                        # move up the list
-D = "@x:sh rm -r <C-r>.<ret>%d:insert-output pwd; ls -A1 --indicator-style=slash<ret>:2<ret>_"                   # delete the file/directory
-e = "@:buffer-close!<ret>:open "                                                                                 # create a file and edit it
-r = "@%d:insert-output pwd; ls -A1 --indicator-style=slash<ret>:2<ret>_"                                         # reload the list
+       "extend_to_line_bounds", "goto_file", "goto_last_modified_file", ":buffer-close!"]                                      # open the selected file
+l = "@xs <ret>i\\<esc>x:change-current-directory <C-r>.<ret>%d:insert-output pwd; ls -A1 --indicator-style=slash<ret>:2<ret>_" # open the selected directory
+h = "@:change-current-directory ../<ret>%d:insert-output pwd; ls -A1 --indicator-style=slash<ret>:2<ret>_"                     # goto the parent directory
+j = "@j_"                                                                                                                      # move down the list
+k = "@k_"                                                                                                                      # move up the list
+D = "@x:sh rm -r <C-r>.<ret>%d:insert-output pwd; ls -A1 --indicator-style=slash<ret>:2<ret>_"                                 # delete the file/directory
+e = "@:buffer-close!<ret>:open "                                                                                               # create a file and edit it
+r = "@%d:insert-output pwd; ls -A1 --indicator-style=slash<ret>:2<ret>_"                                                       # reload the list
 # TODO: the following 3 should reload the file picker after the user has completed the action
-d = "@:sh mkdir "                                                                                                # create a directory
-f = "@:sh touch "                                                                                                # create a file without editing it
-m = "@x:sh mv <C-r>. "                                                                                           # move the selected item to another place
+d = "@:sh mkdir "                                                                                                              # create a directory
+f = "@:sh touch "                                                                                                              # create a file without editing it
+m = "@x:sh mv <C-r>. "                                                                                                         # move the selected item to another place
 
 [editor.indent-guides]
 render = true

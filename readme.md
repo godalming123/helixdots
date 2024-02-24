@@ -24,7 +24,7 @@ ln -Ts $PWD/runtime ~/.config/helix/runtime
 # My thoughs on helix
 ## General
 - I like how everything needs much less configuration as things such as git integration are setup out of the box
-- It feels like my editor is helping me as I go like autosuggesting commands
+- It feels like my editor is helping me as I go like auto suggesting commands
 - In helix I have to type more letters but the command is more memorable EG: vgld in helix vs D in neovim (https://github.com/helix-editor/helix/issues/165)
 
 ## Appereance
@@ -60,3 +60,4 @@ ln -Ts $PWD/runtime ~/.config/helix/runtime
 - There should only be one key to open files *and* directories
 - You should be able to move multiple lines (EG: `5j`)
 - When you navigate to the previous directory, the cursor should be moved to the entry for the previous directory
+- The popup that shows the available commands should be shrunk into the status so that it does not hide the window content
