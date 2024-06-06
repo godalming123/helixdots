@@ -44,16 +44,22 @@ ln -Ts $PWD/runtime ~/.config/helix/runtime
 ## Navigating text
 - I think both helix and neovim do a good job of this
 
+## There are severel PRs that make objective improvements but cannot be merged for some reason
+- [Pickers "v2"](https://github.com/helix-editor/helix/pull/9647)
+- Display an error when formating fails ([ISSUE](https://github.com/helix-editor/helix/issues/6736) [PR](https://github.com/helix-editor/helix/pull/6846))
+- Remove special handling of line ending characters in selection replacement ([ISSUE](https://github.com/helix-editor/helix/issues/10725) [PR](https://github.com/helix-editor/helix/pull/10786))
+- Keep cursor position when exactly replacing text ([ISSUE](https://github.com/helix-editor/helix/issues/5910) [PR](https://github.com/helix-editor/helix/pull/5930))
+- Add a way to only show just the horizontal or vertical position in statusline ([ISSUE](https://github.com/helix-editor/helix/discussions/10282) [PR](https://github.com/helix-editor/helix/pull/10883))
+
 ## Missing some functionality
 - Be able to jump across projects/files within projects effectively:
   - The jumplist cannot have directories in it
   - The jumplist cannot be saved across multiple sessions
-  - You cannot remove items from the jumplist without exiting the session (https://github.com/helix-editor/helix/issues/4757)
-- I cannot set global tab size options (https://github.com/helix-editor/helix/issues/3159)
+  - You cannot remove items from the jumplist without exiting the session ([ISSUE](https://github.com/helix-editor/helix/issues/4757))
+- Cannot set global tab size options (https://github.com/helix-editor/helix/issues/3159)
 - When you search for things helix should show how many results their are (https://github.com/helix-editor/helix/issues/2811)
-- There should be an error when formatting fails (https://github.com/helix-editor/helix/issues/6736)
-- I want to be able to hide the blankline below the status bar when it is empty
-### Things that will probably get solved with plugins (https://github.com/helix-editor/helix/discussions/3806)
+- Be able to hide the blankline below the status bar when it is empty (https://github.com/helix-editor/helix/discussions/10818)
+### Things that will probably get solved with plugins ([plugins discussion](https://github.com/helix-editor/helix/discussions/3806) [plugins PR](https://github.com/helix-editor/helix/pull/8675))
 - No git diff viewer integration (https://github.com/helix-editor/helix/issues/227)
 - No undotree
 ### Problems with my file tree
