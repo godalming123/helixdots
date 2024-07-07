@@ -1,3 +1,8 @@
+[[language]]
+name = "markdown"
+formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}
+
+# TODO: Fix astro language server
 [language-server.astro-ls]
 command = "astro-ls"
 args = [ "--stdio" ]
