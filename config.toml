@@ -15,19 +15,16 @@ select = "underline"
 
 [editor.indent-guides]
 render = true
-character = "┊"
+character = "│"
 skip-levels = 0
 
 [editor.statusline]
-left = ["mode", "spinner"]
-center = ["file-name", "file-modification-indicator"]
-right = ["diagnostics", "position-percentage", "position"]
+left = ["file-name", "file-modification-indicator"]
+right = ["diagnostics", "position-percentage", "position", "spinner"]
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
 X  = "extend_line_above"
-C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
-C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
 # ===============================
 # Keybindings for the file picker
