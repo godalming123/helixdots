@@ -1,9 +1,5 @@
-# This config file relies on features that are not in upstream helix yet:
-# - Macro keybindings: https://github.com/helix-editor/helix/pull/4709
-# - Configuring a command to run on startup (not used yet, but may be used in the future)
-
 theme = "onedark"
-# on-startup = "@<C-f>"
+# on-startup = "@<C-f>" # This is not a feature in upstream helix yet
 
 [editor]
 line-number = "relative"
