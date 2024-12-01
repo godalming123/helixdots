@@ -20,6 +20,7 @@ right = ["diagnostics", "position-percentage", "position", "spinner"]
 
 [keys.normal]
 X  = "extend_line_above"
+<space>a = "@s\|<ret>&" # Aligns every row in a markdown table if you have the whole table selected
 
 # ===============================
 # Keybindings for the file picker
