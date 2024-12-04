@@ -4,15 +4,15 @@ auto-format = true
 formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}
 
 # TODO: Fix astro language server
-[language-server.astro-ls]
-command = "astro-ls"
-args = [ "--stdio" ]
-config = { "environment" = "node" }
+#[language-server.astro-ls]
+#command = "astro-ls"
+#args = [ "--stdio" ]
+#config = { "environment" = "node" }
 
-[[language]]
-name = "astro"
-scope = "source.astro"
-injection-regex = "astro"
-file-types = ["astro"]
-roots = ["package.json", "astro.config.mjs"]
-language-servers = [ "astro-ls" ]
+#[[language]]
+#name = "astro"
+#scope = "source.astro"
+#injection-regex = "astro"
+#file-types = ["astro"]
+#roots = ["package.json", "astro.config.mjs"]
+#language-servers = [ "astro-ls" ]
