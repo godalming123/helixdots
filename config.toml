@@ -1,4 +1,3 @@
-# on-startup = "@<C-f>" # This is not a feature in helix yet
 theme = "onedark"
 
 [editor]
@@ -15,114 +14,17 @@ character = "│"
 skip-levels = 0
 
 [editor.statusline]
-left = ["file-name", "file-modification-indicator"]
-right = ["diagnostics", "position-percentage", "position", "spinner"]
+left = ["spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+right = ["diagnostics", "selections", "register", "position-percentage", "position"]
 
-[keys.normal.space]
-a = '@s([^\\](\\\\)*\|)|^\|<ret>;&' # Aligns every row in a markdown table if you have the whole table selected
-
-[keys.insert]
-"A-," = "normal_mode"
+[keys.insert.j]
+d = "normal_mode"
+j = "@<esc>:insert-output echo -n j<ret>lij"
 
 [keys.normal]
 X  = "extend_line_above"
-###############
-# File picker #
-###############
+# on-startup = "@<C-f>" # This is not a feature in helix yet
+C-f = "@:new<ret>:insert-output lf -print-last-dir -print-selection<ret>ggx:change-current-directory <C-r>.<ret>dx\"fd:buffer-close!<ret>:open <C-r>f<ret><esc>:redraw<ret>"
 
-C-f = "@:new<ret>:insert-output pwd; ls -A1 --indicator-style=slash<ret>:2<ret>_"                                                # open the file picker
-
-[keys.normal."_"]
-q = ":buffer-close!"                                                                                                             # close file picker
-ret = "@xgf:buffer-previous<ret>:buffer-close!<ret>"                                                                             # open the selected file
-l = "@xs \t<ret>i\\<esc>x:change-current-directory <C-r>.<ret>%d:insert-output pwd; ls -A1 --indicator-style=slash<ret>:2<ret>_" # open the selected directory
-h = "@:change-current-directory ../<ret>%d:insert-output pwd; ls -A1 --indicator-style=slash<ret>:2<ret>_"                       # goto the parent directory
-j = "@j_"                                                                                                                        # move down the list
-k = "@kkj_"                                                                                                                      # move up the list
-D = '@xs <ret>i\\<esc>x:sh rm -r <C-r>.<ret>d_'                                                                                  # delete the file/directory
-e = "@:buffer-close!<ret>:open "                                                                                                 # create a file and edit it
-r = "@%d:insert-output pwd; ls -A1 --indicator-style=slash<ret>:2<ret>_"                                                         # reload the list
-d = "@:sh mkdir "                                                                                                                # create a directory
-# TODO: needs to be updated to work
-f = "@ggoNew file: <esc>="                                                                                                       # create a file without editing it
-# TODO: needs to be updated to use the custom input box for the create directory action
-m = "@x:sh mv <C-r>. "                                                                                                           # move the selected item to another place
-
-# Sub-mode for creating files
-[keys.normal."="]
-right = '@vh<A-s>l<esc>,;='
-left = '@v11h<A-s><A-;><esc><A-,>10l='
-end = "@gll="
-home = "@ghf:ll="
-backspace = "@hv10h<A-s><A-;><A-,>9l<A-;>l<A-;>l:pipe ~/.config/helix/last_charecter.sh<ret><esc>="
-ret = '@ghvf:ddxs <ret>i\\<esc>x:sh touch <C-r>.<ret>gh_'
-
-# Handle keypresses
-# TODO: Handle symbols like #
-"." = "@i.<esc>="
-space = "@i <esc>="
-
-0 = "@i0<esc>="
-1 = "@i1<esc>="
-2 = "@i2<esc>="
-3 = "@i3<esc>="
-4 = "@i4<esc>="
-5 = "@i5<esc>="
-6 = "@i6<esc>="
-7 = "@i7<esc>="
-8 = "@i8<esc>="
-9 = "@i9<esc>="
-
-a = "@ia<esc>="
-b = "@ib<esc>="
-c = "@ic<esc>="
-d = "@id<esc>="
-e = "@ie<esc>="
-f = "@if<esc>="
-g = "@ig<esc>="
-h = "@ih<esc>="
-i = "@ii<esc>="
-j = "@ij<esc>="
-k = "@ik<esc>="
-l = "@il<esc>="
-m = "@im<esc>="
-n = "@in<esc>="
-o = "@io<esc>="
-p = "@ip<esc>="
-q = "@iq<esc>="
-r = "@ir<esc>="
-s = "@is<esc>="
-t = "@it<esc>="
-u = "@iu<esc>="
-v = "@iv<esc>="
-w = "@iw<esc>="
-x = "@ix<esc>="
-y = "@iy<esc>="
-z = "@iz<esc>="
-
-A = "@iA<esc>="
-B = "@iB<esc>="
-C = "@iC<esc>="
-D = "@iD<esc>="
-E = "@iE<esc>="
-F = "@iF<esc>="
-G = "@iG<esc>="
-H = "@iH<esc>="
-I = "@iI<esc>="
-J = "@iJ<esc>="
-K = "@iK<esc>="
-L = "@iL<esc>="
-M = "@iM<esc>="
-N = "@iN<esc>="
-O = "@iO<esc>="
-P = "@iP<esc>="
-Q = "@iQ<esc>="
-R = "@iR<esc>="
-S = "@iS<esc>="
-T = "@iT<esc>="
-U = "@iU<esc>="
-V = "@iV<esc>="
-W = "@iW<esc>="
-X = "@iX<esc>="
-Y = "@iY<esc>="
-Z = "@iZ<esc>="
+[keys.normal.space]
+a = '@s([^\\](\\\\)*\|)|^\|<ret>;&' # Aligns every row in a markdown table if you have the whole table selected
