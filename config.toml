@@ -24,7 +24,7 @@ j = "@<esc>:insert-output echo -n j<ret>lij"
 [keys.normal]
 X  = "extend_line_above"
 # on-startup = "@<C-f>" # This is not a feature in helix yet
-C-f = "@:new<ret>:insert-output lf -print-last-dir -print-selection<ret>ggx:change-current-directory <C-r>.<ret>dx\"fd:buffer-close!<ret>:open <C-r>f<ret><esc>:redraw<ret>"
+C-f = '@:new<ret>:insert-output lf -print-last-dir -print-selection<ret>s[ \\]<ret>i\jd,ggx:change-current-directory <C-r>.<ret>dx\"fd:buffer-close!<ret>:open <C-r>f<ret><esc>:redraw<ret>'
 
 [keys.normal.space]
 a = '@s([^\\](\\\\)*\|)|^\|<ret>;&' # Aligns every row in a markdown table if you have the whole table selected
