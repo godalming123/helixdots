@@ -27,4 +27,9 @@ X  = "extend_line_above"
 C-f = '@:new<ret>:insert-output lf -print-last-dir -print-selection<ret>s[ \\]<ret>i\jd,ggx:change-current-directory <C-r>.<ret>dx\"fd:buffer-close!<ret>:open <C-r>f<ret><esc>:redraw<ret>'
 
 [keys.normal.space]
-a = '@s([^\\](\\\\)*\|)|^\|<ret>;&' # Aligns every row in a markdown table if you have the whole table selected
+
+# Aligns every row in a markdown table
+# Assumes that the table is in a seperate paragraph
+# TODO: Currently this macro can only add whitespace, but sometimes whitespace should be removed to align a markdown table
+# TODO: This macro adds spaces to the table header separators, when it should add dashes
+a = '@:vs<ret>mapvhs([^\\](\\\\)*\|)|^\|<ret>;&:q<ret>'
