@@ -1,6 +1,6 @@
 # HelixDots
 
-My helix editor dotfiles.
+My [helix](https://github.com/helix-editor/helix) dotfiles.
 
 # Installation
 
@@ -31,24 +31,25 @@ ln -Ts $PWD/runtime ~/.config/helix/runtime
 
 - I like how everything needs much less configuration, for example git integrations are setup out of the box
 - It feels like my editor is helping me as I go like auto suggesting commands
-- In helix I have to type more letters but the command is more memorable EG: vgld in helix vs D in neovim (https://github.com/helix-editor/helix/issues/165)
+- In helix I have to type more letters but the command is more memorable EG: `vgld` in helix vs `D` in neovim (https://github.com/helix-editor/helix/issues/165)
 
 ## Appereance
 
 - The file picker does not have rounded corners
-- Git signs looks much nicer
-- Status bar looks nicer
+- Git signs look much nicer
+- The status bar looks nicer
 - Helix includes good themes out of the box
-- I like how LSP diagnostics are placed in the top right corner, rathor then being crammed after the lines of code, making them much easier to see
+- LSP diagnostics are placed in the top right corner which makes them much easier to see than vim/neovim where they are crammed after the lines of code
 
 ## Writing text
 
-- The LSP is slightly better
+- The LSP is slightly better in helix than it is in vim/neovim
 
 ## Editing text
 
 - I like being able to use x and X to quickly make visual line selections
-- Using find and replace is much easier as helix shows me exactly what I'm doing as I do it and I generally love using multiple cursors
+- Multiple cursors is a really useful feature that vim/neovim needs a plugin for, but helix has out-of-the-box:
+  - This makes using find/replace much easier since helix shows you exactly what you're doing as you do it, rathor than having to remember a regex command in vim/neovim to do find/replace
 
 ## Navigating text
 
@@ -61,6 +62,7 @@ ln -Ts $PWD/runtime ~/.config/helix/runtime
 ## Missing some functionality
 
 - Be able to jump across projects/files within projects effectively:
+  - Code cannot be folded ([ISSUE](https://github.com/helix-editor/helix/issues/1840))
   - The jumplist cannot have directories in it
   - The jumplist cannot be saved across multiple sessions
   - You cannot remove items from the jumplist without exiting the session ([ISSUE](https://github.com/helix-editor/helix/issues/4757))
