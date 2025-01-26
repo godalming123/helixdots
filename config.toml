@@ -26,10 +26,25 @@ X  = "extend_line_above"
 # on-startup = "@<C-f>" # This is not a feature in helix yet
 C-f = '@:new<ret>:insert-output lf -print-last-dir -print-selection<ret>s[ \\]<ret>i\jd,ggx:change-current-directory <C-r>.<ret>dx\"fd:buffer-close!<ret>:open <C-r>f<ret><esc>:redraw<ret>'
 
-[keys.normal.space]
-
-# Aligns every row in a markdown table
-# Assumes that the table is in a seperate paragraph
-# TODO: Currently this macro can only add whitespace, but sometimes whitespace should be removed to align a markdown table
-# TODO: This macro adds spaces to the table header separators, when it should add dashes
-a = '@:vs<ret>mapvhs([^\\](\\\\)*\|)|^\|<ret>;&:q<ret>'
+[keys.normal.space.space]
+# Aligns every row in a markdown table, only works given the following assemptions:
+# - The table is in a seperate paragraph
+# - The table has a table header seperator
+a = """@\
+  <C-s>\
+  map<A-;>jxvhs[^\\|]<ret><A-d>\
+  x<A-;>vls\\|<ret>i - <esc>\
+  maps +\\|<ret>vh<A-d>\
+  maps[^\\\\\\n](\\\\\\\\)*\\|<ret>vls\\|<ret>i <esc>&\
+  map<A-;>jxvh<A-;>lS\\|<ret>h<A-;>lr-\
+  6<C-o>\
+"""
+# Explanation:
+# - The `@` makes this [a macro keybinding](https://helix-editor.com/news/release-25-01-highlights/#macro-keybindings)
+# - The 1st line saves the current cursor position to the jumplist, so it can be restored later
+# - The 2nd line removes all charecters in the table header that are not `|`
+# - The 3rd line inserts ` - ` before every `|` charecter in the table header
+# - The 4rd line removes all the spacing between the end of the contents in a table row, and the  `|`
+# - The 5th line aligns the table columns
+# - The 6th line replaces the spaces in the table header with dashes
+# - The 7th line jumps backwards in the jumplist to restore the cursor position

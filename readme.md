@@ -4,25 +4,41 @@ My [helix](https://github.com/helix-editor/helix) dotfiles.
 
 # Installation
 
-## Install the dotfiles
+## Install helix
 
-```
-git clone https://github.com/godalming123/helixdots.git ~/.config/helix
-```
+> [!NOTE]
+> These dotfiles require [macro keybindings](https://helix-editor.com/news/release-25-01-highlights/#macro-keybindings), which are only available on helix 25.01 and newer.
 
-## Install rust (if not already installed)
+### From a package manager
+
+See [here](https://docs.helix-editor.com/package-managers.html).
+
+### From source
+
+#### Install rust (if not already installed)
 
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-## Install helix
+#### Download helix source code
 
 ```
 git clone https://github.com/helix-editor/helix.git
 cd helix
+```
+
+#### Compile helix from source
+
+```
 cargo install --path helix-term --locked
 ln -Ts $PWD/runtime ~/.config/helix/runtime
+```
+
+## Install the dotfiles
+
+```
+git clone https://github.com/godalming123/helixdots.git ~/.config/helix
 ```
 
 # My thoughs on helix
@@ -61,6 +77,7 @@ ln -Ts $PWD/runtime ~/.config/helix/runtime
 
 ## Missing some functionality
 
+- Show the context of the currently visible buffer ([ISSUE](https://github.com/helix-editor/helix/issues/396) [PR](https://github.com/helix-editor/helix/pull/6118))
 - Be able to jump across projects/files within projects effectively:
   - Code cannot be folded ([ISSUE](https://github.com/helix-editor/helix/issues/1840))
   - The jumplist cannot have directories in it
