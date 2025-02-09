@@ -78,6 +78,7 @@ git clone https://github.com/godalming123/helixdots.git ~/.config/helix
 ## Missing some functionality
 
 - Show the context of the currently visible buffer ([ISSUE](https://github.com/helix-editor/helix/issues/396) [PR](https://github.com/helix-editor/helix/pull/6118))
+- Be able to save a picker item to the jumplist without leaving the picker ([ISSUE](https://github.com/helix-editor/helix/issues/12822))
 - Be able to jump across projects/files within projects effectively:
   - Code cannot be folded ([ISSUE](https://github.com/helix-editor/helix/issues/1840))
   - The jumplist cannot have directories in it
