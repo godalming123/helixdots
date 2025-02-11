@@ -79,13 +79,14 @@ git clone https://github.com/godalming123/helixdots.git ~/.config/helix
 
 - Show the context of the currently visible buffer ([ISSUE](https://github.com/helix-editor/helix/issues/396) [PR](https://github.com/helix-editor/helix/pull/6118))
 - Be able to save a picker item to the jumplist without leaving the picker ([ISSUE](https://github.com/helix-editor/helix/issues/12822))
+- Muli cursor across multiple buffers ([ISSUE](https://github.com/helix-editor/helix/issues/4335) [PR](https://github.com/helix-editor/helix/pull/4381#issuecomment-1382831419))
 - Be able to jump across projects/files within projects effectively:
   - Code cannot be folded ([ISSUE](https://github.com/helix-editor/helix/issues/1840))
   - The jumplist cannot have directories in it
   - The jumplist cannot be saved across multiple sessions
   - You cannot remove items from the jumplist without exiting the session ([ISSUE](https://github.com/helix-editor/helix/issues/4757))
 - When you search for things helix should show how many results their are (https://github.com/helix-editor/helix/issues/2811)
-- Be able to hide the blankline below the status bar when it is empty (https://github.com/helix-editor/helix/discussions/10818)
+- Be able to hide the blankline below the status bar when it is empty ([DISCUSSION](https://github.com/helix-editor/helix/discussions/10818) [PR](https://github.com/helix-editor/helix/pull/12204))
 
 ### Things that will probably get solved with plugins ([plugins discussion](https://github.com/helix-editor/helix/discussions/3806) [plugins PR](https://github.com/helix-editor/helix/pull/8675))
 
