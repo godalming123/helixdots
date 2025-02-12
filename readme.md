@@ -85,7 +85,8 @@ git clone https://github.com/godalming123/helixdots.git ~/.config/helix
   - The jumplist cannot have directories in it
   - The jumplist cannot be saved across multiple sessions
   - You cannot remove items from the jumplist without exiting the session ([ISSUE](https://github.com/helix-editor/helix/issues/4757))
-- When you search for things helix should show how many results their are (https://github.com/helix-editor/helix/issues/2811)
+- The behavior of the `repeat_last_motion` command (`alt-f`) is unintuative ([ISSUE](https://github.com/helix-editor/helix/issues/8761#issuecomment-1803145453))
+- When you search for things helix should show how many results there are ([ISSUE](https://github.com/helix-editor/helix/issues/2811))
 - Be able to hide the blankline below the status bar when it is empty ([DISCUSSION](https://github.com/helix-editor/helix/discussions/10818) [PR](https://github.com/helix-editor/helix/pull/12204))
 
 ### Things that will probably get solved with plugins ([plugins discussion](https://github.com/helix-editor/helix/discussions/3806) [plugins PR](https://github.com/helix-editor/helix/pull/8675))
