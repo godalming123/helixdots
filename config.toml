@@ -32,11 +32,11 @@ C-f = '@:new<ret>:insert-output lf -print-last-dir -print-selection<ret>s[ \\]<r
 # - The table has a table header seperator
 a = """@\
   <C-s>\
-  map<A-;>jxvhs[^\\|]<ret><A-d>\
+  map<A-;>gjxvhs[^\\|]<ret><A-d>\
   x<A-;>vls\\|<ret>i - <esc>\
   maps +\\|<ret>vh<A-d>\
   maps[^\\\\\\n](\\\\\\\\)*\\|<ret>vls\\|<ret>i <esc>&\
-  map<A-;>jxvh<A-;>lS\\|<ret>h<A-;>lr-\
+  map<A-;>gjxvh<A-;>lS\\|<ret>h<A-;>lr-\
   6<C-o>\
 """
 # Explanation:
