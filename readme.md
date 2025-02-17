@@ -78,18 +78,20 @@ git clone https://github.com/godalming123/helixdots.git ~/.config/helix
 ## Missing some functionality
 
 - Show the context of the currently visible buffer ([ISSUE](https://github.com/helix-editor/helix/issues/396) [PR](https://github.com/helix-editor/helix/pull/6118))
-- Be able to save a picker item to the jumplist without leaving the picker ([ISSUE](https://github.com/helix-editor/helix/issues/12822))
+- Compositor components key remapping: Be able to save a picker item to the jumplist without leaving the picker ([ISSUE](https://github.com/helix-editor/helix/issues/12822))
 - Muli cursor across multiple buffers ([ISSUE](https://github.com/helix-editor/helix/issues/4335) [PR](https://github.com/helix-editor/helix/pull/4381#issuecomment-1382831419))
-- Be able to create multiple cursors from picker items
+- Compositor components key remapping: Be able to create multiple cursors from picker items
 - Be able to jump across projects/files within projects effectively:
   - Code cannot be folded ([ISSUE](https://github.com/helix-editor/helix/issues/1840))
   - The jumplist cannot have directories in it
   - The jumplist cannot be saved across multiple sessions
   - You cannot remove items from the jumplist without exiting the session ([ISSUE](https://github.com/helix-editor/helix/issues/4757))
+    - Compositor components key remapping: My preffered solution to this would be to have a keybinding to delete the selected item from the jumplist picker
 - There isn't a register for the absolute path of the document ([ISSUE](https://github.com/helix-editor/helix/issues/12881))
 - The behavior of the `repeat_last_motion` command (`alt-f`) is unintuative ([ISSUE](https://github.com/helix-editor/helix/issues/8761#issuecomment-1803145453))
 - When you search for things helix should show how many results there are ([ISSUE](https://github.com/helix-editor/helix/issues/2811))
 - Be able to hide the blankline below the status bar when it is empty ([DISCUSSION](https://github.com/helix-editor/helix/discussions/10818) [PR](https://github.com/helix-editor/helix/pull/12204))
+- Some of these issues are marked with "compositor components key remapping", becuase it might might be good to implement key remapping for compositor components first ([ISSUE](https://github.com/helix-editor/helix/issues/5505))
 
 ### Things that will probably get solved with plugins ([plugins discussion](https://github.com/helix-editor/helix/discussions/3806) [plugins PR](https://github.com/helix-editor/helix/pull/8675))
 
