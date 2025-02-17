@@ -78,9 +78,12 @@ git clone https://github.com/godalming123/helixdots.git ~/.config/helix
 ## Missing some functionality
 
 - Show the context of the currently visible buffer ([ISSUE](https://github.com/helix-editor/helix/issues/396) [PR](https://github.com/helix-editor/helix/pull/6118))
-- Compositor components key remapping: Be able to save a picker item to the jumplist without leaving the picker ([ISSUE](https://github.com/helix-editor/helix/issues/12822))
+- Compositor components key remapping for picker:
+  - Be able to save a picker item to the jumplist without leaving the picker ([ISSUE](https://github.com/helix-editor/helix/issues/12822))
+  - Be able to create multiple cursors from picker items
+  - Be able to scroll the picker preview
+  - Be able to revert git changes from the git changes picker
 - Muli cursor across multiple buffers ([ISSUE](https://github.com/helix-editor/helix/issues/4335) [PR](https://github.com/helix-editor/helix/pull/4381#issuecomment-1382831419))
-- Compositor components key remapping: Be able to create multiple cursors from picker items
 - Be able to jump across projects/files within projects effectively:
   - Code cannot be folded ([ISSUE](https://github.com/helix-editor/helix/issues/1840))
   - The jumplist cannot have directories in it

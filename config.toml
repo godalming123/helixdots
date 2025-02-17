@@ -26,6 +26,21 @@ X  = "extend_line_above"
 # on-startup = "@<C-f>" # This is not a feature in helix yet
 C-f = '@:new<ret>:insert-output lf -print-last-dir -print-selection<ret>s[ \\]<ret>i\jd,ggx:change-current-directory <C-r>.<ret>dx\"fd:buffer-close!<ret>:open <C-r>f<ret><esc>:redraw<ret>'
 
+[keys.normal.g]
+# I use these keybindings to go to where I should hard wrap lines in a project
+# TODO: These should not go onto the next line when it is less than the
+#       specified width.
+6 = "@gh59l"
+7 = "@gh69l"
+8 = "@gh79l"
+9 = "@gh89l"
+0 = "@gh99l"
+1 = "@gh109l"
+2 = "@gh119l"
+3 = "@gh129l"
+4 = "@gh139l"
+5 = "@gh149l"
+
 [keys.normal.space.space]
 # Aligns every row in a markdown table, only works given the following assemptions:
 # - The table is in a seperate paragraph
