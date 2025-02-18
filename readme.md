@@ -84,13 +84,15 @@ git clone https://github.com/godalming123/helixdots.git ~/.config/helix
   - Be able to scroll the picker preview
   - Be able to revert git changes from the git changes picker
 - Muli cursor across multiple buffers ([ISSUE](https://github.com/helix-editor/helix/issues/4335) [PR](https://github.com/helix-editor/helix/pull/4381#issuecomment-1382831419))
+- Be able to undo/redo motions/selections ([DISCUSSION](https://github.com/helix-editor/helix/discussions/12905))
 - Be able to jump across projects/files within projects effectively:
   - Code cannot be folded ([ISSUE](https://github.com/helix-editor/helix/issues/1840))
   - The jumplist cannot have directories in it
   - The jumplist cannot be saved across multiple sessions
   - You cannot remove items from the jumplist without exiting the session ([ISSUE](https://github.com/helix-editor/helix/issues/4757))
     - Compositor components key remapping: My preffered solution to this would be to have a keybinding to delete the selected item from the jumplist picker
-- There isn't a register for the absolute path of the document ([ISSUE](https://github.com/helix-editor/helix/issues/12881))
+- `]d` does not work with multi cursor ([ISSUE](https://github.com/helix-editor/helix/issues/12906))
+- There isn't a register for the absolute path of the document ([ISSUE](https://github.com/helix-editor/helix/issues/12881), [PR](https://github.com/helix-editor/helix/pull/12887))
 - The behavior of the `repeat_last_motion` command (`alt-f`) is unintuative ([ISSUE](https://github.com/helix-editor/helix/issues/8761#issuecomment-1803145453))
 - When you search for things helix should show how many results there are ([ISSUE](https://github.com/helix-editor/helix/issues/2811))
 - Be able to hide the blankline below the status bar when it is empty ([DISCUSSION](https://github.com/helix-editor/helix/discussions/10818) [PR](https://github.com/helix-editor/helix/pull/12204))
