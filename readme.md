@@ -89,6 +89,11 @@ git clone https://github.com/godalming123/helixdots.git ~/.config/helix
   - Code cannot be folded ([ISSUE](https://github.com/helix-editor/helix/issues/1840))
   - The jumplist cannot have directories in it
   - The jumplist cannot be saved across multiple sessions
+  - You cannot set a keybinding that opens items from the jumplist directly
+    - This could work by changing `Ctrl-s`, so that you also specify a keybinding for the item that gets created in the jumplist
+    - Then, from any file in that project, you would be able to press `Ctrl-j + that keybinding` to jump straight there
+    - One keybinding (maybe space) could be reserved to specify that the jumplist item does not have a keybinding associated with it
+    - Maybe these jumplist items without keybindings associated could also be tempoarary, and the items with keybindings would be saved across helix sessions
   - You cannot remove items from the jumplist without exiting the session ([ISSUE](https://github.com/helix-editor/helix/issues/4757))
     - Compositor components key remapping: My preffered solution to this would be to have a keybinding to delete the selected item from the jumplist picker
 - `]d` does not work with multi cursor ([ISSUE](https://github.com/helix-editor/helix/issues/12906))
