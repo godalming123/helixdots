@@ -23,8 +23,20 @@ j = "@<esc>:insert-output echo -n j<ret>lij"
 
 [keys.normal]
 X  = "extend_line_above"
+"*" = "@eb<space>*" # Selects the word under the cursor, and sets the search register to that word
 # on-startup = "@<C-f>" # This is not a feature in helix yet
-C-f = '@:new<ret>:insert-output lf -print-last-dir -print-selection<ret>s[ \\]<ret>i\jd,ggx:change-current-directory <C-r>.<ret>dx\"fd:buffer-close!<ret>:open <C-r>f<ret><esc>:redraw<ret>'
+C-f = """@\
+  :new<ret>\
+  :insert-output lf -print-last-dir -print-selection<ret>\
+  <A-s>\
+  |printf '%q\n' \"""$(cat)\"""<ret>\
+  ggvgl\
+  :change-current-directory <C-r>.<ret>\
+  xdvgl"fd\
+  :buffer-close!<ret>\
+  :open <C-r>f<ret>\
+  :redraw<ret>\
+"""
 
 [keys.normal.g]
 # I use these keybindings to go to where I should hard wrap lines in a project
@@ -40,6 +52,9 @@ C-f = '@:new<ret>:insert-output lf -print-last-dir -print-selection<ret>s[ \\]<r
 3 = "@gh129l"
 4 = "@gh139l"
 5 = "@gh149l"
+
+[keys.normal.space]
+"*" = "search_selection_detect_word_boundaries"
 
 [keys.normal.space.space]
 # Aligns every row in a markdown table, only works given the following assemptions:
