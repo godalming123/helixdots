@@ -3,6 +3,9 @@ theme = "onedark"
 [editor]
 line-number = "relative"
 
+[editor.inline-diagnostics]
+cursor-line = "hint"
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
@@ -24,19 +27,21 @@ j = "@<esc>:insert-output echo -n j<ret>lij"
 [keys.normal]
 X  = "extend_line_above"
 "*" = "@eb<space>*" # Selects the word under the cursor, and sets the search register to that word
+H = "@eb<space>*%s<up><ret>" # Selects every occurance of the word under the cursor within the document
 # on-startup = "@<C-f>" # This is not a feature in helix yet
-C-f = """@\
-  :new<ret>\
-  :insert-output lf -print-last-dir -print-selection<ret>\
-  <A-s>\
-  |printf '%q\n' \"""$(cat)\"""<ret>\
-  ggvgl\
-  :change-current-directory <C-r>.<ret>\
-  xdvgl"fd\
-  :buffer-close!<ret>\
-  :open <C-r>f<ret>\
-  :redraw<ret>\
-"""
+#C-f = """@\
+#  :new<ret>\
+#  :insert-output lf -print-last-dir -print-selection<ret>\
+#  <A-s>\
+#  |printf '%q\n' \"""$(cat)\"""<ret>\
+#  ggvgl\
+#  :change-current-directory <C-r>.<ret>\
+#  xdvgl"fd\
+#  :buffer-close!<ret>\
+#  :open <C-r>f<ret>\
+#  :redraw<ret>\
+#"""
+C-f = "file_picker"
 
 [keys.normal.g]
 # I use these keybindings to go to where I should hard wrap lines in a project
