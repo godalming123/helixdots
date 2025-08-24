@@ -47,3 +47,7 @@ indent = { tab-width = 4, unit = "    " }
 #file-types = ["astro"]
 #roots = ["package.json", "astro.config.mjs"]
 #language-servers = [ "astro-ls" ]
+
+[[language]]
+name = "elm"
+formatter = { command = "elm-format", args = ["--stdin"] }
