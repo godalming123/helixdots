@@ -1,0 +1,7 @@
+[submodule "select-project.hx"]
+	path = select-project.hx
+	url = https://github.com/godalming123/select-project.hx
+
+[submodule "switcheroo.hx"]
+	path = switcheroo.hx
+	url = https://github.com/godalming123/switcheroo.hx

@@ -1,4 +1,5 @@
 theme = "onedark"
+# theme = "monokai_pro_ristretto"
 
 [editor]
 line-number = "relative"
@@ -44,6 +45,8 @@ H = "@eb<space>*%s<up><ret>" # Selects every occurance of the word under the cur
 C-f = "file_explorer"
 
 [keys.normal.g]
+s = ":switcheroo"
+p = ":select-project"
 # I use these keybindings to go to where I should hard wrap lines in a project
 # TODO: These should not go onto the next line when it is less than the
 #       specified width.
