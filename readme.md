@@ -41,7 +41,7 @@ ln -Ts $PWD/runtime ~/.config/helix/runtime
 git clone https://github.com/godalming123/helixdots.git ~/.config/helix
 ```
 
-# My thoughs on helix
+# My thoughts on helix
 
 ## General
 
@@ -49,7 +49,7 @@ git clone https://github.com/godalming123/helixdots.git ~/.config/helix
 - It feels like my editor is helping me as I go like auto suggesting commands
 - In helix I have to type more letters but the command is more memorable EG: `vgld` in helix vs `D` in neovim (https://github.com/helix-editor/helix/issues/165)
 
-## Appereance
+## Appearance
 
 - The file picker does not have rounded corners, unlike telescope in neovim
 - Git signs look much nicer than they do in neovim
@@ -95,13 +95,13 @@ git clone https://github.com/godalming123/helixdots.git ~/.config/helix
     - One keybinding (maybe space) could be reserved to specify that the jumplist item does not have a keybinding associated with it
     - Maybe these jumplist items without keybindings associated could also be tempoarary, and the items with keybindings would be saved across helix sessions
   - You cannot remove items from the jumplist without exiting the session ([ISSUE](https://github.com/helix-editor/helix/issues/4757))
-    - Compositor components key remapping: My preffered solution to this would be to have a keybinding to delete the selected item from the jumplist picker
+    - Compositor components key remapping: My preferred solution to this would be to have a keybinding to delete the selected item from the jumplist picker
 - `]d` does not work with multi cursor ([ISSUE](https://github.com/helix-editor/helix/issues/12906))
 - There isn't a register for the absolute path of the document ([ISSUE](https://github.com/helix-editor/helix/issues/12881), [PR](https://github.com/helix-editor/helix/pull/12887))
 - The behavior of the `repeat_last_motion` command (`alt-.`) is unintuative ([ISSUE](https://github.com/helix-editor/helix/issues/8761#issuecomment-1803145453))
 - When you search for things, helix should show how many results there are ([ISSUE](https://github.com/helix-editor/helix/issues/2811))
 - Be able to hide the blankline below the status bar when it is empty ([DISCUSSION](https://github.com/helix-editor/helix/discussions/10818), [PR](https://github.com/helix-editor/helix/pull/12204))
-- Some of these issues are marked with "compositor components key remapping", becuase it might might be good to implement key remapping for compositor components first ([ISSUE](https://github.com/helix-editor/helix/issues/5505))
+- Some of these issues are marked with "compositor components key remapping", because it might might be good to implement key remapping for compositor components first ([ISSUE](https://github.com/helix-editor/helix/issues/5505))
 
 ### Things that will probably get solved with plugins ([plugins discussion](https://github.com/helix-editor/helix/discussions/3806), [plugins PR](https://github.com/helix-editor/helix/pull/8675))
 

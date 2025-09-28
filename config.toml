@@ -28,7 +28,7 @@ j = "@<esc>:insert-output echo -n j<ret>lij"
 [keys.normal]
 X  = "extend_line_above"
 "*" = "@eb<space>*" # Selects the word under the cursor, and sets the search register to that word
-H = "@eb<space>*%s<up><ret>" # Selects every occurance of the word under the cursor within the document
+H = "@eb<space>*%s<up><ret>" # Selects every occurrence of the word under the cursor within the document
 # on-startup = "@<C-f>" # This is not a feature in helix yet
 #C-f = """@\
 #  :new<ret>\
@@ -66,8 +66,8 @@ p = ":select-project"
 
 [keys.normal.space.space]
 # Aligns every row in a markdown table, only works given the following assemptions:
-# - The table is in a seperate paragraph
-# - The table has a table header seperator
+# - The table is in a separate paragraph
+# - The table has a table header separator
 a = """@\
   <C-s>\
   map<A-;>gjxvhs[^\\|]<ret><A-d>\
@@ -80,8 +80,8 @@ a = """@\
 # Explanation:
 # - The `@` makes this [a macro keybinding](https://helix-editor.com/news/release-25-01-highlights/#macro-keybindings)
 # - The 1st line saves the current cursor position to the jumplist, so it can be restored later
-# - The 2nd line removes all charecters in the table header that are not `|`
-# - The 3rd line inserts ` - ` before every `|` charecter in the table header
+# - The 2nd line removes all characters in the table header that are not `|`
+# - The 3rd line inserts ` - ` before every `|` character in the table header
 # - The 4rd line removes all the spacing between the end of the contents in a table row, and the  `|`
 # - The 5th line aligns the table columns
 # - The 6th line replaces the spaces in the table header with dashes

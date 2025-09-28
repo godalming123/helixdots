@@ -1,37 +1,34 @@
-[[language]]
-name = "markdown"
-auto-format = true
-formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}
+[language-server.typos]
+command = "typos-lsp"
+environment = {"RUST_LOG" = "error"}
+config.config = "~/.config/typos-lsp/typos.toml"
+config.diagnosticSeverity = "Info"
 
 [language-server.pyright]
 command = "pyright-langserver"
 args = ["--stdio"]
 
 [[language]]
+name = "toml"
+language-servers = ["taplo", "tombi", "typos"]
+
+[[language]]
+name = "markdown"
+auto-format = true
+formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}
+language-servers = ["marksman", "markdown-oxide", "typos"]
+
+[[language]]
+name = "go"
+language-servers = ["gopls", "golangci-lint-lsp", "typos"]
+
+[[language]]
+name = "odin"
+language-servers = ["ols", "typos"]
+
+[[language]]
 name = "python"
-scope = "source.python"
-injection-regex = "py(thon)?"
-file-types = [
-  "py",
-  "pyi",
-  "py3",
-  "pyw",
-  "ptl",
-  "rpy",
-  "cpy",
-  "ipy",
-  "pyt",
-  { glob = ".python_history" },
-  { glob = ".pythonstartup" },
-  { glob = ".pythonrc" },
-  { glob = "*SConstruct" },
-  { glob = "*SConscript" },
-  { glob = "*sconstruct" },
-]
-shebangs = ["python", "uv"]
-roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
-comment-token = "#"
-language-servers = ["pyright"]
+language-servers = ["pyright", "typos"]
 indent = { tab-width = 4, unit = "    " }
 
 # TODO: Fix astro language server
@@ -51,3 +48,4 @@ indent = { tab-width = 4, unit = "    " }
 [[language]]
 name = "elm"
 formatter = { command = "elm-format", args = ["--stdin"] }
+language-servers = ["elm-language-server", "typos"]
