@@ -9,6 +9,14 @@ command = "pyright-langserver"
 args = ["--stdio"]
 
 [[language]]
+name = "typescript"
+language-servers = ["typescript-language-server", "typos"]
+
+[[language]]
+name = "svelte"
+language-servers = ["svelteserver", "typos"]
+
+[[language]]
 name = "toml"
 language-servers = ["taplo", "tombi", "typos"]
 
